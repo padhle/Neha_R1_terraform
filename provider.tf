@@ -9,14 +9,14 @@ terraform {
     bucket     = "b1bcm1992"
     key        = "bucket/statefile"
     region     = "ap-south-1"
-    access_key = "AKIA5TDMNCSMOLWA2Q6E"
-    secret_key = "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"
+    access_key = "yyy"
+    secret_key = "yyy"
   }
 
 }
 
 provider "aws" {
   region     = "ap-south-1"
-  access_key = "AKIA5TDMNCSMOLWA2Q6E"
-  secret_key = "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"
+  access_key = "yyy"
+  secret_key = "yyy"
 }

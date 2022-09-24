@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git clone') {
+            steps {
+                echo 'cloning the repository'
+               git branch: 'main', credentialsId: 'git_id_and_password', url: 'https://github.com/padhle/Neha_R1_terraform.git'
+            }
+        }
+        stage('nuget restore') {
+            steps {
+                echo 'building the project'
+                powershell '''echo %GIT_BRANCH%
+                set var1=%GIT_BRANCH:*/=%
+                echo %var1%'''
+            }
+        }        
+        stage('pfx and snk file copy') {
+            steps {
+                echo 'building the project'
+                powershell '''echo %GIT_BRANCH%
+                set var1=%GIT_BRANCH:*/=%
+                echo %var1%'''
+            }
+        }  
+        stage('build') {
+            steps {
+                echo 'building the project'
+                powershell '''echo %GIT_BRANCH%
+                set var1=%GIT_BRANCH:*/=%
+                echo %var1%'''
+            }
+        }          
+        stage('copy to shared drive') {
+            steps {
+                echo 'building the project'
+                powershell '''echo %GIT_BRANCH%
+                set var1=%GIT_BRANCH:*/=%
+                echo %var1%'''
+            }
+        }   
+        
+    }
+}

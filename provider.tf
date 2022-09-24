@@ -6,17 +6,17 @@ terraform {
   }
 
   backend "s3" {
-    bucket     = "b1bcm1992"
+    bucket     = "b1bcm1994"
     key        = "bucket/statefile"
     region     = "ap-south-1"
-    access_key = "yyy"
-    secret_key = "yyy"
+    access_key = "xx"
+    secret_key = "xx"
   }
 
 }
 
 provider "aws" {
   region     = "ap-south-1"
-  access_key = "yyy"
-  secret_key = "yyy"
+  access_key = "xx"
+  secret_key = "xx"
 }
